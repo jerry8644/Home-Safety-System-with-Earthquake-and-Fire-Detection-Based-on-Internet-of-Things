@@ -1,0 +1,5 @@
+import mysql.connector
+cnx=mysql.connector.connect(user='iot1',password='iot1',host='34.81.255.169',database='test1')
+cursor=cnx.cursor()
+cursor.execute("INSERT INTO Chenroom (fire_status_chen,smoke_status) Values(%d,%s)"%(int(fire_status),1))
+cnx.commit()
